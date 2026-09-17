@@ -1,10 +1,12 @@
+import java.util.Scanner;
 public class circles
 {
     private double radius;
     private boolean isPositive;
     private double height;
-
-
+    
+    Scanner input= new Scanner(System.in);
+ 
     public double circle_Area()
     {
         System.out.println("Please input the radius of the circle");
