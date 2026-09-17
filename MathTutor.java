@@ -25,7 +25,7 @@ public class MathTutor
         {
             System.out.println("The two problems in the circle class are 
             finding the area of a circle and area of a sphere; type in \"circle\" or \"sphere\"");
-
+            userInput= input.nextLine();
             if(userInput=="circle")
             {
               tutor.circleArea();
@@ -40,6 +40,19 @@ public class MathTutor
             System.out.println("The two types of problems in the triangles class are
                 pythagorean theorem and area of a triangle: please type in \"pytha\" or \"area\" to proceed"); 
             
+            userInput= input.nextLine();
+            if(userInput=="pytha")
+            {
+
+            }
+            else if(userInput=="area")
+            {
+
+            }
+            else
+            {
+                System.out.println("Your input is not valid; please type in \"pytha\" or \"area\" ");
+            }
         }
         else if(userInput=="l")
         {
