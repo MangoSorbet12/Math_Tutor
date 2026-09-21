@@ -10,31 +10,30 @@ import java.util.Scanner;
 
 public class MathTutor
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         int checker;
+        String input_checker;
 
         Scanner userInput= new Scanner(System.in);
-        String reader="";
+        int reader=0;
+        String input="";
 
-        System.out.println("Welcome to the Math Tutor Program! This program can solve 6 problems 
-        total sorted into three types: circles, triangles, and lines; to choose your problem
-        type, type in (lowercase for all 3 only ) \"c\", \"t\", or \"l\".");
-        reader=userInput.nextLine();
+        System.out.println("Welcome to the Math Tutor Program! This program can solve 6 problems total sorted into three types: circles (1), triangles (2), and lines (3); to choose your problem type, type in 1,2,or 3");
+        reader=userInput.nextInt();
 
-        if(reader=="c");
+        if(reader==1);
         {
-            System.out.println("The two problems in the circle class are 
-            finding the area of a circle and area of a sphere; type in \"circle\" or \"sphere\"");
-            circles circle_tutor= new circles();
+            System.out.println("The two problems in the circle class are finding the area of a circle and area of a sphere; type in \"circle\" or \"sphere\"");
+            Circles circle_tutor= new Circles();
 
-            reader=userInput.nextLine();
+            input=userInput.nextLine();
 
-            if(reader=="circle")
+            if(input=="circle")
             {
               circle_tutor.circleArea();
             }
-            else if(reader=="sphere")
+            else if(input.equals("sphere"))
             {
                 circle_tutor.sphereArea();
             }
@@ -43,11 +42,10 @@ public class MathTutor
                 errorLooper("\"sphere\"", "\"circle\"");
             }
         }
-        else if(reader=="t")
+        else if(reader==2)
         {
-            System.out.println("The two types of problems in the triangles class are
-                pythagorean theorem and area of a triangle: please type in \"pytha\" or \"area\" to proceed"); 
-            reader=userInput.nextLine();
+            System.out.println("The two types of problems in the triangles class are pythagorean theorem and area of a triangle: please type in \"pytha\" or \"area\" to proceed"); 
+            input=userInput.nextLine();
 
             Triangles tri_tutor= new Triangles();
             if(reader=="pytha")
@@ -77,10 +75,9 @@ public class MathTutor
                 System.out.println("Your input is not valid; please type in \"pytha\" or \"area\" ");
             }
         }
-        else if(reader=="l")
+        else if(reader==3)
         {
-            System.out.println("The two types of problems in the lines class are find the slope
-            of a line and the midpoint on a line; please type in \"slope\" or \"midpoint\"");
+            System.out.println("The two types of problems in the lines class are find the slope of a line and the midpoint on a line; please type in \"slope\" or \"midpoint\"");
 
             reader=userInput.nextLine();
 
@@ -128,7 +125,9 @@ public class MathTutor
         {
             for(checker=1; checker>=1;)
             {
-                if(userInput==choice1 || userInput==choice2)
+                input_checker= userInput.nextLine();
+
+                if(input_checker==choice1 || input_checker==choice2)
                 {
                     checker=0;
                 }
