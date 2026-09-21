@@ -12,133 +12,102 @@ public class MathTutor
 {
     public static void main(String[] args)
     {
-        int checker;
-        String input_checker;
+        Errors error= new Errors();
 
         Scanner userInput= new Scanner(System.in);
         int reader=0;
-        String input="";
+    
 
         System.out.println("Welcome to the Math Tutor Program! This program can solve 6 problems total sorted into three types: circles (1), triangles (2), and lines (3); to choose your problem type, type in 1,2,or 3");
         reader=userInput.nextInt();
 
         if(reader==1);
         {
-            System.out.println("The two problems in the circle class are finding the area of a circle and area of a sphere; type in \"circle\" or \"sphere\"");
+            System.out.println("The two problems in the circle class are finding the area of a circle (1) and area of a sphere (2); type in 1 or 2");
             Circles circle_tutor= new Circles();
 
-            input=userInput.nextLine();
+            reader=userInput.nextInt();
 
-            if(input=="circle")
+            if(reader==1)
             {
-              circle_tutor.circleArea();
+              circle_tutor.circle_Area();
+              userInput.close();
             }
-            else if(input.equals("sphere"))
+            else if(reader==2)
             {
-                circle_tutor.sphereArea();
+                circle_tutor.sphere_Area();
+                userInput.close();
             }
             else
             {
-                errorLooper("\"sphere\"", "\"circle\"");
+                error.errorLooper();
             }
         }
-        else if(reader==2)
+         if(reader==2)
         {
-            System.out.println("The two types of problems in the triangles class are pythagorean theorem and area of a triangle: please type in \"pytha\" or \"area\" to proceed"); 
-            input=userInput.nextLine();
+            System.out.println("The two types of problems in the triangles class are pythagorean theorem (1) and area of a triangle (2): please type in 1 or 2 to proceed"); 
+            reader=userInput.nextInt();
 
             Triangles tri_tutor= new Triangles();
-            if(reader=="pytha")
+            if(reader==1)
             {
                 tri_tutor.pythagorean_Theorem();
+                userInput.close();
             }
-            else if(reader=="area")
+            else if(reader==2)
             {
                 tri_tutor.tri_Area();
+                userInput.close();
             }
             else
             {
-                errorLooper("\"pytha\"","\"area\"");
+                error.errorLooper();
             }
             
-            userInput= input.nextLine();
-            if(userInput=="pytha")
-            {
-
-            }
-            else if(userInput=="area")
-            {
-
-            }
-            else
-            {
-                System.out.println("Your input is not valid; please type in \"pytha\" or \"area\" ");
-            }
         }
-        else if(reader==3)
+        if(reader==3)
         {
-            System.out.println("The two types of problems in the lines class are find the slope of a line and the midpoint on a line; please type in \"slope\" or \"midpoint\"");
+            System.out.println("The two types of problems in the lines class are find the slope of a line (1) and midpoint of a line (2). Please type in 1 or 2");
 
-            reader=userInput.nextLine();
+            reader=userInput.nextInt();
 
-            lines line_tutor= new lines();
+            Lines line_tutor= new Lines();
 
-            if(reader=="slope")
+            if(reader==1)
             {
                 line_tutor.slope();
+                userInput.close();
             }
-            else if(reader=="midpoint")
+            else if(reader==2)
             {
                 line_tutor.midpoint();
+                userInput.close();
             }
             else
             {
-                errorLooper("\"midpoint\"","\"slope\"");
+                error.errorLooper();
             }
 
         }
         else
         {
-          for(checker=1; checker>=1;)
+          for(int checker1=1; checker1>=1;)
             {
-                if(userInput==choice1 || userInput==choice2 || userInput==choice3)
+                if(reader==1 || reader==2 || reader==3)
                 {
-                    checker=0;
+                    checker1=0;
+                    userInput.close();
                 }
                 else
                 {
-                    checker++;
-                    errorMessage("\"c\", \"t\", or \"l\"");
+                    checker1++;
+                    System.out.println("Please type in 1,2,or 3 only to choose between the three different types of problems");
+                    reader= userInput.nextInt();
                 }
           
-        }
-    
-
-        public void errorMessage(String message)
-        {
-            System.out.println("Please choose to type in "+message+" only, as
-            your previous input was invalid");
-            reader=userInput.nextLine();
-        }
-
-        public void errorLooper(String choice1, String choice2)
-        {
-            for(checker=1; checker>=1;)
-            {
-                input_checker= userInput.nextLine();
-
-                if(input_checker==choice1 || input_checker==choice2)
-                {
-                    checker=0;
-                }
-                else
-                {
-                    checker++;
-                    errorMessage(choice1+" or "+choice2);
-                }
             }
         }
-        
+    
 
     }
 }

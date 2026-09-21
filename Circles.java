@@ -1,11 +1,11 @@
 import java.util.Scanner;
-public class circles
+public class Circles
 {
     private double radius;
 
     private double height;
     
-    private int counter;
+    //private int counter;
     
     Scanner circlesInput= new Scanner(System.in);
  
@@ -13,11 +13,25 @@ public class circles
     {
         System.out.println("Please input the radius of the circle");
         radius= circlesInput.nextDouble();
-        
+      /**  
         for(counter=1; counter>=1;)
         {
-            negativeNum(radius);
+            if(radius>0)
+            {
+                counter=0;
+             return Math.pow(radius,2)*Math.PI;
+            }
+            else
+            {
+            counter++;
+
+            System.out.println("Please input your value again; it seems like you put in a negative number or zero");
+            radius=circlesInput.nextDouble();
+            
+            }
         }
+      **/
+        return Math.PI*Math.pow(radius,2);
         
     }
 
@@ -30,21 +44,6 @@ public class circles
         return Math.PI*radius*height;
     }
 
-    public void negativeNum(double value)
-    {
-        if(value>0)
-        {
-            counter=0;
 
-        }
-        else
-        {
-            counter++;
-
-            System.out.println("Please input your value again; it seems like you put in a negative number or zero");
-            value=circlesInput.nextDouble();
-            
-        }
-    }
 }
 

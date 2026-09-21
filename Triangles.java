@@ -1,4 +1,4 @@
-import java.util.Scanner();
+import java.util.Scanner;
 
 public class Triangles  
 {
@@ -16,20 +16,22 @@ public class Triangles
         System.out.println("Please input the height of the triangle");
         height= tri_Input.nextDouble();
 
+         tri_Input.close();
+
         return (base*height)/2;
-        tri_Input.close();
+       
     }
 
     public double pythagorean_Theorem()
     {
-        System.out.println("Please note that this method is only meant to compute 
-        the longest side of the triangle, or the hypotenuse, meaning the two shortest
-        sides must be given as input");
+        System.out.println("Please note that this method is only meant to compute the longest side of the triangle, or the hypotenuse, meaning the two shortest sides must be given as input");
 
         System.out.println("Please input the first side");
         side1= tri_Input.nextDouble();
         System.out.println("Please input the second side");
         side2= tri_Input.nextDouble();
+
+        tri_Input.close();
 
         return Math.sqrt(Math.pow(side1,2)+ Math.pow(side2,2));
 
