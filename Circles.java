@@ -2,25 +2,49 @@ import java.util.Scanner;
 public class circles
 {
     private double radius;
-    private boolean isPositive;
+
     private double height;
     
-    Scanner input= new Scanner(System.in);
+    private int counter;
+    
+    Scanner circlesInput= new Scanner(System.in);
  
     public double circle_Area()
     {
         System.out.println("Please input the radius of the circle");
-        radius= input.nextDouble();
-        return Math.PI*radius;
+        radius= circlesInput.nextDouble();
+        
+        for(counter=1; counter>=1;)
+        {
+            negativeNum(radius);
+        }
+        
     }
 
     public double sphere_Area()
     {
         System.out.println("Please input the radius of the base of the sphere");
-        radius= input.nextDouble();
+        radius= circlesInput.nextDouble();
         System.out.println("Please input the height of the sphere");
-        height= input.nextDouble();
+        height= circlesInput.nextDouble();
         return Math.PI*radius*height;
+    }
+
+    public void negativeNum(double value)
+    {
+        if(value>0)
+        {
+            counter=0;
+
+        }
+        else
+        {
+            counter++;
+
+            System.out.println("Please input your value again; it seems like you put in a negative number or zero");
+            value=circlesInput.nextDouble();
+            
+        }
     }
 }
 
