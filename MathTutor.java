@@ -26,16 +26,11 @@ public class MathTutor
         {
             System.out.println("The two problems in the circle class are 
             finding the area of a circle and area of a sphere; type in \"circle\" or \"sphere\"");
-<<<<<<< HEAD
-            userInput= input.nextLine();
-            if(userInput=="circle")
-=======
             circles circle_tutor= new circles();
 
             reader=userInput.nextLine();
 
             if(reader=="circle")
->>>>>>> 62d95f3 (made all 4 classes)
             {
               circle_tutor.circleArea();
             }
