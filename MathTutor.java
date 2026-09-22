@@ -15,17 +15,20 @@ public class MathTutor
         //Errors error= new Errors();
 
         Scanner userInput= new Scanner(System.in);
+
+        // all of these are for storing the Scanner's info
         int reader;
         int circleReader=0;
         int triReader=0;
         int lineReader=0;
         int restart=0;
 
-        
+    //This loop is for restarting the program without re-running the program    
     for(var i=1; i>=1;) 
     {    
         System.out.println("Welcome to the Math Tutor Program! This program can solve 6 problems total sorted into three types: circles (1), triangles (2), and lines (3); to choose your problem type, type in 1, 2, or 3.");
         reader=userInput.nextInt();
+        //This first big if statement is for the circle class problems
         if(reader==1)
         {
             System.out.println("The two problems in the circle class are finding the area of a circle (1) and area of a sphere (2); type in 1 or 2");
@@ -39,6 +42,8 @@ public class MathTutor
               System.out.println("The area of the circle is "+circle_tutor.circle_Area());
               System.out.println("Would you like to solve for another problem? Yes is 1, no is 2.");
               restart= userInput.nextInt();
+
+              //this is for restarting the program; it's in every mini conditional btw
               if(restart==1)
               {
                 i++;
@@ -70,7 +75,7 @@ public class MathTutor
         
         }
         
-
+        //this conditional is for the triangle class problems
         if(reader==2)
         {
             System.out.println("The two types of problems in the triangles class are pythagorean theorem (1) and area of a triangle (2): please type in 1 or 2 to proceed"); 
@@ -115,6 +120,8 @@ public class MathTutor
             
             
         }
+
+        //this conditional is for the lines class problems.
         if(reader==3)
         {
             System.out.println("The two types of problems in the lines class are find the slope of a line (1) and midpoint of a line (2). Please type in 1 or 2");

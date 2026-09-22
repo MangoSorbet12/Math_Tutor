@@ -9,6 +9,10 @@ public class Triangles
     private double side2;
 
     Scanner tri_Input= new Scanner(System.in);
+    /**
+     * This is the first method for the Triangles class. It's for solving the area of a triangle.
+     * The formula is (b*h)/2.
+     */
     public double tri_Area()
     {
         System.out.println("Please input the base of the triangle");
@@ -21,6 +25,10 @@ public class Triangles
        
     }
 
+    /**
+     * This is the second method for the Triangles class. It's for Pythagorean Theorem.
+     * This one is only for finding the hypotenuse, not the 2 shorter sides.
+     */
     public double pythagorean_Theorem()
     {
         System.out.println("Please note that this method is only meant to compute the longest side of the triangle, or the hypotenuse, meaning the two shortest sides must be given as input");
