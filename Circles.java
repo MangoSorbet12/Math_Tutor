@@ -7,7 +7,9 @@ public class Circles
     
     
     Scanner circlesInput= new Scanner(System.in);
- 
+ /**
+  * This is my first method. It finds the area of the circle using the formula A= PI*r^2
+  */
     public double circle_Area()
     {
         System.out.println("Please input the radius of the circle");
@@ -16,6 +18,10 @@ public class Circles
         return Math.PI*Math.pow(radius,2);
         
     }
+/**
+ * This is my second method for the circle class. It finds the area of the sphere by finding
+ * the area of the base (circle area), and then multiplying it by the height.
+ */
 
     public double sphere_Area()
     {
