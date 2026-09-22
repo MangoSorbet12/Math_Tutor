@@ -23,11 +23,13 @@ public class MathTutor
 
         System.out.println("Welcome to the Math Tutor Program! This program can solve 6 problems total sorted into three types: circles (1), triangles (2), and lines (3); to choose your problem type, type in 1, 2, or 3.");
         reader=userInput.nextInt();
-
-        if (reader == 1 );
+    for(var i=1; i>=1;) 
+    {    
+        if(reader==1)
         {
             System.out.println("The two problems in the circle class are finding the area of a circle (1) and area of a sphere (2); type in 1 or 2");
             Circles circle_tutor= new Circles();
+            i=0;
 
             circleReader=userInput.nextInt();
 
@@ -46,11 +48,13 @@ public class MathTutor
                 error.errorLooper();
             }
         }
+        
 
         if(reader==2)
         {
             System.out.println("The two types of problems in the triangles class are pythagorean theorem (1) and area of a triangle (2): please type in 1 or 2 to proceed"); 
             triReader=userInput.nextInt();
+            i=0;
 
             Triangles tri_tutor= new Triangles();
             if(triReader==1)
@@ -69,31 +73,41 @@ public class MathTutor
             }
             
         }
-        else if(reader==3)
+        if(reader==3)
         {
             System.out.println("The two types of problems in the lines class are find the slope of a line (1) and midpoint of a line (2). Please type in 1 or 2");
 
             lineReader=userInput.nextInt();
+            i=0;
 
             Lines line_tutor= new Lines();
-
+        for(var l=1; l>=1;)
+         {
             if(lineReader==1)
             {
                 System.out.println("The slope of the line is "+line_tutor.slope());
+                l=0;
                 
             }
             else if(lineReader==2)
             {
                 System.out.println("The midpoint of the line is "+line_tutor.midpoint());
+                l=0;
                 
             }
             else
             {
                 error.errorLooper();
+                l++;
             }
+         }
 
         }
-        
+        else
+        {
+            i++;
+        }
+    }    
         // else
         // {
         //   for(int checker1=1; checker1>=1;)
