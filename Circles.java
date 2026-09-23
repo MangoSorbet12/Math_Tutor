@@ -19,15 +19,15 @@ public class Circles
         
     }
 /**
- * This is my second method for the circle class. It finds the area of the sphere by finding
+ * This is my second method for the circle class. It finds the area of a cylinder by finding
  * the area of the base (circle area), and then multiplying it by the height.
  */
 
-    public double sphere_Area()
+    public double cylinder_Area()
     {
-        System.out.println("Please input the radius of the base of the sphere");
+        System.out.println("Please input the radius of the base of the cylinder");
         radius= circlesInput.nextDouble();
-        System.out.println("Please input the height of the sphere");
+        System.out.println("Please input the height of the cylinder");
         height= circlesInput.nextDouble();
 
         return Math.PI*radius*height;

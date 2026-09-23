@@ -31,12 +31,13 @@ public class MathTutor
         //This first big if statement is for the circle class problems
         if(reader==1)
         {
-            System.out.println("The two problems in the circle class are finding the area of a circle (1) and area of a sphere (2); type in 1 or 2");
+            System.out.println("The two problems in the circle class are finding the area of a circle (1) and area of a cylinder (2); type in 1 or 2");
             Circles circle_tutor= new Circles();
             
 
             circleReader=userInput.nextInt();
-
+            //each nested conditional statement is for a method (also prompts user to restart program)
+            //this one is for area of a circle
             if(circleReader==1)
             {
               System.out.println("The area of the circle is "+circle_tutor.circle_Area());
@@ -55,11 +56,13 @@ public class MathTutor
               }
               
             }
+            //this is area of a cylinder
             else if(circleReader==2)
             {
-                System.out.println("The area of the sphere is "+circle_tutor.sphere_Area());
+                System.out.println("The area of the cylinder is "+circle_tutor.cylinder_Area());
                 System.out.println("Would you like to solve for another problem? Yes is 1, no is 2.");
               restart= userInput.nextInt();
+
               if(restart==1)
               {
                 i++;
@@ -169,7 +172,7 @@ public class MathTutor
 
         }
         
-    }   
+    }   //closes the Scanner once user chooses to end the program
          userInput.close(); 
   
     }

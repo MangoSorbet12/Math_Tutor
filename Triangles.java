@@ -2,9 +2,11 @@ import java.util.Scanner;
 
 public class Triangles  
 {
+    //for area of a triangle method
     private double base;
     private double height;
 
+    //for pythagorean theorem method
     private double side1;
     private double side2;
 
@@ -38,7 +40,7 @@ public class Triangles
         System.out.println("Please input the second side");
         side2= tri_Input.nextDouble();
 
-
+        // A^2 + B^2= C^2 (looking for C, so squares both side values and then takes the square root)
         return Math.sqrt(Math.pow(side1,2)+ Math.pow(side2,2));
 
     }

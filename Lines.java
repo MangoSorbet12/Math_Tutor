@@ -39,21 +39,24 @@ public class Lines
 
     /**
      * This is the second method of the Lines class. 
-     * It finds the midpoint of a line by averaging the two x coordinates.
+     * It finds the midpoint of a line by first averaging the two x coordinates.
      * Then it averages the two y coordinates, so the midpoint coordinate is found
      */
     public void midpoint()
     {
+        //2 x-coordinates 
         System.out.println("Please type in your first x-coordinate");
         coordinate_x1= linesInput.nextDouble();
         System.out.println("Please type in your second x-coordinate");
         coordinate_x2= linesInput.nextDouble();
         
+        //2 y-coordinates
         System.out.println("Please type in the first y-coordinate");
         coordinate_y1= linesInput.nextDouble();
         System.out.println("Please type in the second y-coordinate");
         coordinate_y2= linesInput.nextDouble();
 
+        //average of the coordinate points
         double xResult= (coordinate_x1+coordinate_x2)/2;
         double yResult= (coordinate_y1+coordinate_y2)/2;
 
