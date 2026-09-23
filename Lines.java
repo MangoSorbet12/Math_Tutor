@@ -44,9 +44,9 @@ public class Lines
      */
     public void midpoint()
     {
-        System.out.println("Please type in your first coordinate");
+        System.out.println("Please type in your first x-coordinate");
         coordinate_x1= linesInput.nextDouble();
-        System.out.println("Please type in your second coordinate");
+        System.out.println("Please type in your second x-coordinate");
         coordinate_x2= linesInput.nextDouble();
         
         System.out.println("Please type in the first y-coordinate");
